@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Japan Health & Wellness Market Research</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Georgia', serif;
+      background: #f8f7f4;
+      color: #2c2c2c;
+    }
+
+    /* Cover */
+    .cover {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 64px 48px 48px;
+      min-height: 220px;
+    }
+    .cover-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #a0aec0;
+      margin-bottom: 20px;
+    }
+    .cover h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      line-height: 1.3;
+      max-width: 640px;
+      margin-bottom: 32px;
+    }
+    .cover-meta {
+      display: flex;
+      gap: 48px;
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      color: #a0aec0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+    }
+    .cover-meta div strong {
+      display: block;
+      color: #e2e8f0;
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    /* Body */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 48px 32px;
+    }
+
+    /* Section */
+    .section { margin-bottom: 52px; }
+    .section-label {
+      font-family: 'Arial', sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #9b8ea0;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #e2ddd8;
+    }
+    h2 {
+      font-size: 1.35rem;
+      font-weight: normal;
+      color: #1a1a2e;
+      margin-bottom: 16px;
+      line-height: 1.4;
+    }
+    p {
+      font-size: 0.93rem;
+      line-height: 1.85;
+      color: #4a4a5a;
+      margin-bottom: 14px;
+    }
+
+    /* Brief Box */
+    .brief-box {
+      background: #fff;
+      border: 1px solid #e8e4df;
+      border-left: 3px solid #6b5b95;
+      padding: 20px 24px;
+      margin-bottom: 36px;
+      border-radius: 0 4px 4px 0;
+    }
+    .brief-box .brief-title {
+      font-family: 'Arial', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #6b5b95;
+      margin-bottom: 10px;
+    }
+    .brief-box p {
+      font-size: 0.88rem;
+      color: #555;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Key Stats */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+    .stat-card {
+      background: #fff;
+      border: 1px solid #e8e4df;
+      padding: 20px;
+      border-radius: 6px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #1a1a2e;
+      display: block;
+      margin-bottom: 4px;
+      font-family: 'Arial', sans-serif;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      color: #888;
+      font-family: 'Arial', sans-serif;
+      line-height: 1.3;
+    }
+
+    /* Key Players Table */
+    .players-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+      background: #fff;
+    }
+    .players-table th {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: normal;
+      font-size: 0.78rem;
+      letter-spacing: 0.5px;
+    }
+    .players-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f0ece8;
+      color: #444;
+      vertical-align: top;
+    }
+    .players-table tr:last-child td { border-bottom: none; }
+    .players-table tr:hover td { background: #faf9f7; }
+    .brand-name { font-weight: bold; color: #1a1a2e; }
+    .tag {
+      display: inline-block;
+      background: #f0ece8;
+      color: #6b5b95;
+      font-size: 0.7rem;
+      padding: 2px 7px;
+      border-radius: 10px;
+      margin: 1px 2px 1px 0;
+    }
+
+    /* Distribution Channels */
+    .channels-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .channel-card {
+      background: #fff;
+      border: 1px solid #e8e4df;
+      padding: 18px 20px;
+      border-radius: 6px;
+    }
+    .channel-card h4 {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.82rem;
+      font-weight: bold;
+      color: #1a1a2e;
+      margin-bottom: 7px;
+    }
+    .channel-card p {
+      font-size: 0.8rem;
+      margin: 0;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* Takeaways */
+    .takeaway-list {
+      list-style: none;
+      padding: 0;
+    }
+    .takeaway-list li {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #f0ece8;
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: #4a4a5a;
+    }
+    .takeaway-list li:last-child { border-bottom: none; }
+    .takeaway-num {
+      font-family: 'Arial', sans-serif;
+      font-size: 0.75rem;
+      font-weight: bold;
+      color: #6b5b95;
+      min-width: 22px;
+      padding-top: 2px;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a2e;
+      color: #a0aec0;
+      font-family: 'Arial', sans-serif;
+      font-size: 0.75rem;
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer strong { color: #e2e8f0; }
+
+    @media (max-width: 600px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .channels-grid { grid-template-columns: 1fr; }
+      .cover-meta { flex-direction: column; gap: 16px; }
+      .cover h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Cover -->
+<div class="cover">
+  <div class="cover-label">Market Research Report</div>
+  <h1>Japan Health &amp; Wellness Market<br>Entry Landscape</h1>
+  <div class="cover-meta">
+    <div><strong>Prepared for</strong>Client: Confidential (AU-based wellness brand)</div>
+    <div><strong>Prepared by</strong>Sally — Japanese Virtual Assistant</div>
+    <div><strong>Scope</strong>Dietary supplements &amp; functional foods</div>
+    <div><strong>Date</strong>February 2026</div>
+  </div>
+</div>
+
+<!-- Body -->
+<div class="container">
+
+  <!-- Client Brief -->
+  <div class="brief-box">
+    <div class="brief-title">Client Brief</div>
+    <p>An Australian-based health supplement brand exploring entry into the Japan market. Required a foundational overview of market size, key local competitors, distribution channels, and consumer behavior to inform a go/no-go decision.</p>
+  </div>
+
+  <!-- Section 1: Market Overview -->
+  <div class="section">
+    <div class="section-label">01 — Market Overview</div>
+    <h2>Japan is the world's second-largest health supplement market.</h2>
+    <p>Japan's health food and supplement industry is valued at approximately ¥1.1 trillion (~$7.5B USD) annually, driven by an aging population, strong preventive-health culture, and growing interest in lifestyle medicine. The market has grown steadily post-pandemic, with immunity, gut health, and beauty-from-within categories showing the highest growth rates.</p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-num">¥1.1T</span>
+        <span class="stat-label">Annual market size<br>(supplements + functional foods)</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">+4.2%</span>
+        <span class="stat-label">Year-on-year growth<br>(2024–2025)</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">~60%</span>
+        <span class="stat-label">Adults who take supplements<br>regularly</span>
+      </div>
+    </div>
+
+    <p>Two regulatory pathways are relevant for overseas brands: <strong>FOSHU</strong> (Food for Specified Health Uses — government-approved health claims) and <strong>FFC</strong> (Foods with Functional Claims — self-declared, easier to register). Most overseas brands entering Japan opt for FFC first due to lower regulatory burden and faster time-to-market.</p>
+  </div>
+
+  <!-- Section 2: Key Players -->
+  <div class="section">
+    <div class="section-label">02 — Key Competitors</div>
+    <h2>The market is led by domestic brands with strong pharmacy and DTC presence.</h2>
+    <table class="players-table">
+      <thead>
+        <tr>
+          <th>Brand</th>
+          <th>Focus</th>
+          <th>Primary Channel</th>
+          <th>Notable Strength</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="brand-name">DHC</span></td>
+          <td><span class="tag">Beauty</span><span class="tag">Multi-vitamin</span></td>
+          <td>Direct mail / Online</td>
+          <td>Dominant DTC brand; loyalty subscription model</td>
+        </tr>
+        <tr>
+          <td><span class="brand-name">FANCL</span></td>
+          <td><span class="tag">Anti-aging</span><span class="tag">Beauty</span></td>
+          <td>Retail stores / Online</td>
+          <td>Preservative-free positioning; strong brand trust</td>
+        </tr>
+        <tr>
+          <td><span class="brand-name">Asahi (Ebios)</span></td>
+          <td><span class="tag">Gut health</span><span class="tag">Immunity</span></td>
+          <td>Drugstores / CVS</td>
+          <td>Mass distribution; trusted pharmaceutical heritage</td>
+        </tr>
+        <tr>
+          <td><span class="brand-name">Meiji / Morinaga</span></td>
+          <td><span class="tag">Sports</span><span class="tag">Protein</span></td>
+          <td>Supermarkets / Sports retail</td>
+          <td>Established dairy/food brand trust</td>
+        </tr>
+        <tr>
+          <td><span class="brand-name">Overseas (NOW, Swisse)</span></td>
+          <td><span class="tag">Multi-category</span></td>
+          <td>Amazon JP / iHerb / Lohaco</td>
+          <td>Growing via e-commerce; perceived as "authentic overseas"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Section 3: Distribution -->
+  <div class="section">
+    <div class="section-label">03 — Distribution Channels</div>
+    <h2>Drugstore chains and e-commerce are the primary entry points.</h2>
+    <div class="channels-grid">
+      <div class="channel-card">
+        <h4>🏥 Drugstore Chains</h4>
+        <p>Matsumoto Kiyoshi, Tsuruha, Sugi Pharmacy — dominant physical retail. Require local distributor partnerships and Japanese labeling. High visibility, but shelf placement is competitive.</p>
+      </div>
+      <div class="channel-card">
+        <h4>🛒 E-commerce (Amazon JP / Rakuten)</h4>
+        <p>Fastest entry route for overseas brands. iHerb has built strong brand recognition for imported supplements. Japanese-language product pages and customer service are essential.</p>
+      </div>
+      <div class="channel-card">
+        <h4>🏪 Convenience Stores (CVS)</h4>
+        <p>7-Eleven, FamilyMart, Lawson carry select supplement lines. Reserved for established brands with proven volume. Not suitable as an entry point.</p>
+      </div>
+      <div class="channel-card">
+        <h4>💻 Direct-to-Consumer (DTC)</h4>
+        <p>Growing segment driven by subscription models. Requires Japanese-language website, local payment options (JP credit cards, convenience store payment), and customer support.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 4: Consumer Insights -->
+  <div class="section">
+    <div class="section-label">04 — Consumer Insights</div>
+    <h2>Japanese consumers prioritize safety, scientific backing, and trusted sources.</h2>
+    <p>Unlike Western markets where "natural" and "plant-based" positioning drives purchasing, Japanese consumers are highly influenced by clinical evidence, ingredient transparency, and brand heritage. Key purchase drivers include: doctor or pharmacist recommendations, ingredient origin (domestic Japanese ingredients command a premium), and packaging design that communicates quality.</p>
+    <p>The beauty supplement sub-category (collagen, hyaluronic acid, ceramide) is particularly strong, especially among women in their 30s–50s. Social media influence is growing via Instagram and LINE, though word-of-mouth and printed media still hold significant weight for health products.</p>
+  </div>
+
+  <!-- Section 5: Takeaways -->
+  <div class="section">
+    <div class="section-label">05 — Key Takeaways</div>
+    <h2>Recommendations for market entry consideration.</h2>
+    <ul class="takeaway-list">
+      <li>
+        <span class="takeaway-num">01</span>
+        <span>Start with e-commerce (Amazon JP or own DTC site) before pursuing drugstore distribution. Lower investment required, faster validation, and growing consumer comfort with online health purchases.</span>
+      </li>
+      <li>
+        <span class="takeaway-num">02</span>
+        <span>Register under the FFC (Foods with Functional Claims) pathway rather than FOSHU. Shorter timeline (60-day notification vs. multi-year FOSHU approval) with sufficient credibility for initial market entry.</span>
+      </li>
+      <li>
+        <span class="takeaway-num">03</span>
+        <span>Invest in Japanese-language content and customer support from day one. Japanese consumers have low tolerance for poor localization — this is table stakes, not optional.</span>
+      </li>
+      <li>
+        <span class="takeaway-num">04</span>
+        <span>Identify a niche that domestic brands underserve. Current gaps include: plant-based protein for non-athletes, stress and sleep formulations using Western herbs, and sustainability-positioned supplements.</span>
+      </li>
+      <li>
+        <span class="takeaway-num">05</span>
+        <span>Budget for a local distributor or Japan-based representative for regulatory navigation, retailer negotiations, and ongoing market monitoring. Remote-only operations significantly limit market penetration speed.</span>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <div>Prepared by <strong>Sally</strong> — Japanese Virtual Assistant &amp; Researcher</div>
+  <div>Confidential — for client use only</div>
+</footer>
+
+</body>
+</html>
